@@ -1,0 +1,20 @@
+{
+  "name": "nascimento-portfolio-final",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "postinstall": "node scripts/install.mjs",
+    "install:apps": "node scripts/install.mjs",
+    "dev": "npm run dev:portfolio",
+    "dev:portfolio": "npm run dev --prefix apps/portfolio",
+    "dev:vertice": "npm run dev --prefix apps/vertice-imoveis",
+    "build": "node scripts/build.mjs",
+    "build:portfolio": "npm run build --prefix apps/portfolio",
+    "build:vertice": "node scripts/build-vertice.mjs",
+    "preview": "npm run preview --prefix apps/portfolio -- --outDir ../../dist"
+  }
+}
